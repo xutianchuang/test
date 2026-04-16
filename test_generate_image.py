@@ -23,6 +23,10 @@ class GenerateImageTests(unittest.TestCase):
                 generate_svg(output, 0, 5)
             with self.assertRaises(ValueError):
                 generate_svg(output, 5, 0)
+            with self.assertRaises(ValueError):
+                generate_svg(output, -1, 5)
+            with self.assertRaises(ValueError):
+                generate_svg(output, 5, -1)
 
 
 if __name__ == "__main__":
