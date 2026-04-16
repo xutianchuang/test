@@ -5,7 +5,7 @@ from pathlib import Path
 from generate_image import generate_svg
 
 
-class GenerateImageTests(unittest.TestCase):
+class TestGenerateImage(unittest.TestCase):
     def test_generate_svg_writes_svg_content(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             output = Path(tmp_dir) / "img.svg"
