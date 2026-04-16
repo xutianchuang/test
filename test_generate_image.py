@@ -21,6 +21,8 @@ class GenerateImageTests(unittest.TestCase):
             output = Path(tmp_dir) / "img.svg"
             with self.assertRaises(ValueError):
                 generate_svg(output, 0, 5)
+            with self.assertRaises(ValueError):
+                generate_svg(output, 5, 0)
 
 
 if __name__ == "__main__":
